@@ -18,7 +18,8 @@ import lombok.extern.slf4j.Slf4j;
 public class MailService {
 
 	private final JavaMailSender mailSender;
-	//private final MailContentBuilder mailContentBuilder;
+	@SuppressWarnings("unused")
+	private final MailContentBuilder mailContentBuilder;
 	
 	public void sendMail(NotificationEmail notificationEmail) {
 		MimeMessagePreparator messagePreparator = mimeMessage -> {
