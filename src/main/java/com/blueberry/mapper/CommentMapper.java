@@ -12,7 +12,7 @@ import com.blueberry.model.User;
 public interface CommentMapper {
 	
 	@Mapping(target = "id", ignore = true)
-    @Mapping(target = "text", source = "commentsDto.text")
+    @Mapping(target = "text", source = "commentsDTO.text")
     @Mapping(target = "createdDate", expression = "java(java.time.Instant.now())")
     @Mapping(target = "post", source = "post")
     @Mapping(target = "user", source = "user")

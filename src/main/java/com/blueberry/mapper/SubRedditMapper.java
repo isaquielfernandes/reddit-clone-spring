@@ -13,7 +13,7 @@ import com.blueberry.model.SubReddit;
 @Mapper(componentModel = "spring")
 public interface SubRedditMapper {
 
-	@Mapping(target = "numberOfPosts", expression = "java(mapPosts(subreddit.getPosts()))")
+	@Mapping(target = "numberOfPosts", expression = "java(mapPosts(subReddit.getPosts()))")
 	SubRedditDTO mapSubRedditToDto(SubReddit subReddit);
 	
 	default Integer mapPosts(List<Post> numberOfPosts) {
